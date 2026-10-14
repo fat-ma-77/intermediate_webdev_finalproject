@@ -1,8 +1,8 @@
 {
-  "name": "website-optimization-assignment",
+  "name": "intermediate_webdev_finalproject",
   "version": "1.0.0",
   "private": true,
-  "description": "Jasmine and Webpack website optimization practice",
+  "description": "Simple interest calculator with input validation, Jasmine tests, and a complete Webpack distribution",
   "scripts": {
     "test": "jasmine",
     "build": "webpack"

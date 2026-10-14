@@ -3,24 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A simple, accessible calculator demonstrating JavaScript input validation, automated Jasmine tests, and Webpack builds.">
+  <meta name="description" content="Calculate simple interest using your principal amount, annual interest rate, and time in years with this accessible simple interest calculator.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#213a5c">
-  <title>Simple Calculator | JavaScript Practice</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <title>Simple Interest Calculator | Principal, Rate and Time</title>
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css">
-  <script src="dist/bundle.js" defer></script>
+  <script src="dist/main.js" defer></script>
 </head>
 <body>
   <main class="calculator">
-    <h1>Simple Calculator</h1>
-    <p>Enter two numbers to add them together.</p>
+    <h1>Simple Interest Calculator</h1>
+    <p>Enter a principal amount, annual interest rate, and time in years.</p>
     <form id="calculator-form">
-      <label for="first-number">First number</label>
-      <input id="first-number" name="first-number" type="number" step="any" required>
-      <label for="second-number">Second number</label>
-      <input id="second-number" name="second-number" type="number" step="any" required>
-      <button type="submit">Calculate</button>
+      <label for="principal">Principal amount</label>
+      <input id="principal" name="principal" type="number" min="0.01" step="any" required>
+      <label for="rate">Annual interest rate (%)</label>
+      <input id="rate" name="rate" type="number" min="0" step="any" required>
+      <label for="time">Time (years)</label>
+      <input id="time" name="time" type="number" min="0" step="any" required>
+      <button type="submit">Calculate interest</button>
     </form>
     <p id="result" role="status" aria-live="polite"></p>
   </main>

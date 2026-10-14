@@ -1,12 +1,21 @@
+const { calculateInterest, compute } = require('../src/script.js');
 
-const { addNumbers } = require('../script.js');
-
-describe('Calculator Tests', () => {
-  it('should correctly add two numbers', () => {
-    expect(addNumbers(5, 3)).toBe(8);
+describe('Simple Interest Calculator', () => {
+  it('calculates simple interest from numeric principal, rate, and time', () => {
+    expect(calculateInterest(1000, 10, 2)).toBe(200);
+    expect(calculateInterest(1000, 0, 2)).toBe(0);
   });
 
-  it('should convert string inputs into numbers', () => {
-    expect(addNumbers('10', '20')).toBe(30);
+  it('converts input strings to numbers and safely handles absent DOM elements', () => {
+    expect(calculateInterest('5000', '5', '3')).toBe(750);
+    expect(() => calculateInterest('', '5', '3')).toThrowError(RangeError);
+    const previousDocument = global.document;
+    try {
+      global.document = { getElementById: () => null };
+      expect(() => compute()).not.toThrow();
+    } finally {
+      if (previousDocument === undefined) delete global.document;
+      else global.document = previousDocument;
+    }
   });
 });

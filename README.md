@@ -1,57 +1,27 @@
-# Website Optimization Assignment
+# intermediate_webdev_finalproject
 
-This is a self-contained **example project** for practicing an SEO-friendly HTML page, safe JavaScript number conversion, Jasmine tests, and a Webpack production build. It is **not** claimed to be the course's original starter project.
+Simple interest calculator using principal amount, annual percentage rate, and time in years.
 
-## Set up (PowerShell in VS Code)
+## Run
 
 ```powershell
 npm install
+npx jasmine
+npx webpack
 ```
 
-## Task 3: Capture the real "no specs found" output
+The formula is `principal * (rate / 100) * time`. Input values are converted with `Number()`, validated, and displayed without crashing when an element is absent. The input IDs are `principal`, `rate`, and `time`.
 
-Temporarily rename `spec/calculator.spec.js` to `spec/calculator.spec.js.disabled` (or run this command):
+`script.js` and `src/script.js` contain the same implementation. The root file is available at the assignment's required submission URL; Webpack bundles the source file in `src`. Keep both copies synchronized when editing.
 
-```powershell
-Rename-Item spec/calculator.spec.js calculator.spec.js.disabled
-npx jasmine 2>&1 | Tee-Object -FilePath no-spec.txt
-```
+Open `index.html` after building, or use the complete static site in `dist/index.html`. The distribution includes `index.html`, `main.js`, `favicon.ico`, and `style.css`.
 
-**Important:** Keep the `spec/support/jasmine.mjs` configuration file. The command should report no specs; capture the **actual** output, not an invented transcript.
+The HTML includes a favicon, external stylesheet and deferred JavaScript, a descriptive title, meta description, viewport metadata, a heading, labels, and an accessible result announcement.
 
-## Task 4: Capture both tests passing
+## Assignment evidence
 
-```powershell
-Rename-Item spec/calculator.spec.js.disabled calculator.spec.js
-npx jasmine 2>&1 | Tee-Object -FilePath both-tests-passed.txt
-```
+- `no-spec.txt`: actual `npx jasmine` output while the spec file was temporarily disabled, including the command.
+- `both-tests-passed.txt`: actual `npx jasmine` output with both specs restored and passing, including the command.
+- `dist-directory.txt`: actual `npx webpack` output for the complete distribution, including the command.
 
-Confirm the output says `2 specs, 0 failures` before submitting.
-
-## Task 5: Capture Webpack output
-
-```powershell
-npx webpack 2>&1 | Tee-Object -FilePath dist-directory.txt
-Get-ChildItem dist
-```
-
-Check that the output reports successful compilation and that `dist/bundle.js` exists.
-
-## GitHub URLs for Tasks 1 and 2
-
-```powershell
-git init
-git add .
-git commit -m "Complete website optimization assignment"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
-git push -u origin main
-```
-
-Create an **empty public GitHub repository** before adding its remote. Then submit:
-
-- Task 1: `https://github.com/YOUR_USERNAME/YOUR_REPO/blob/main/index.html`
-- Task 2: `https://github.com/YOUR_USERNAME/YOUR_REPO/blob/main/script.js`
-- Tasks 3–5: Paste the **actual terminal content** of the three text files.
-
-For an assessment based on a supplied starter repository, adapt these changes to the official starter files and the exact function/API names required by the course tests.
+This project was adapted to the requirements supplied in grading feedback. The original course starter was not available.

@@ -1,5 +1,7 @@
+npx jasmine
 Started
 ..
 
+
 2 specs, 0 failures
-Finished in 0.007 seconds
+Finished in 0.01 seconds

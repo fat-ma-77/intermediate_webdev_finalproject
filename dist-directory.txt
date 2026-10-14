@@ -1,3 +1,7 @@
-asset bundle.js 816 bytes [emitted] [minimized] (name: main)
-./script.js 1.25 KiB [built] [code generated]
-webpack 5.111.1 compiled successfully in 411 ms
+npx webpack
+asset favicon.ico 4.19 KiB [emitted]
+asset main.js 1.38 KiB [emitted] [minimized] (name: main)
+asset index.html 1.24 KiB [emitted] [minimized]
+asset style.css 537 bytes [emitted] [minimized]
+./src/script.js 2.21 KiB [built] [code generated]
+webpack 5.111.1 compiled successfully in 566 ms
