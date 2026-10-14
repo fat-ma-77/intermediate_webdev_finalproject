@@ -1,0 +1,8 @@
+* { box-sizing: border-box; }
+body { font-family: system-ui, sans-serif; background: #f4f7fc; color: #18304d; margin: 0; padding: 2rem; }
+.calculator { max-width: 440px; margin: 5vh auto; background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 8px 28px #1d31541c; }
+form { display: grid; gap: .7rem; }
+input, button { font: inherit; padding: .7rem; border-radius: 8px; border: 1px solid #8b9eb3; }
+button { margin-top: .5rem; background: #213a5c; color: white; cursor: pointer; }
+button:hover { background: #345f8f; }
+button:focus-visible, input:focus-visible { outline: 3px solid #89bcf8; outline-offset: 2px; }
