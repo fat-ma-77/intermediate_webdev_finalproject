@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple, accessible calculator demonstrating JavaScript input validation, automated Jasmine tests, and Webpack builds.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#213a5c">
+  <title>Simple Calculator | JavaScript Practice</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="dist/bundle.js" defer></script>
+</head>
+<body>
+  <main class="calculator">
+    <h1>Simple Calculator</h1>
+    <p>Enter two numbers to add them together.</p>
+    <form id="calculator-form">
+      <label for="first-number">First number</label>
+      <input id="first-number" name="first-number" type="number" step="any" required>
+      <label for="second-number">Second number</label>
+      <input id="second-number" name="second-number" type="number" step="any" required>
+      <button type="submit">Calculate</button>
+    </form>
+    <p id="result" role="status" aria-live="polite"></p>
+  </main>
+</body>
+</html>
