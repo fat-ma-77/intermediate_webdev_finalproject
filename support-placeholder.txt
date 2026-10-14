@@ -1,0 +1,1 @@
+The Jasmine configuration is in spec/support/jasmine.mjs.
